@@ -1,4 +1,5 @@
 const fabricantesModel = require("../models/fabricantesModel.js")
+const videojuegosModel = require("../models/videojuegosModel.js")
 
 /**
  * Controlador para traer todos los registros de fabricantes.
@@ -10,7 +11,7 @@ const fabricantesModel = require("../models/fabricantesModel.js")
  */
 const traerFabricantes = async (req, res) => {
     try {
-        const fabricantes = await fabricantesModel.findAll();
+        const fabricantes = await fabricantesModel.findAll({ include:[{ model: videojuegosModel, as: "juegos" }]});
         res.json(fabricantes);
     } catch (error) {
         res.json({ message: error.message });
@@ -30,7 +31,7 @@ const traerFabricantePorId = async (req, res) => {
         if (!validarEntero(req.params.id)) {
             return res.status(400).json({ message: "El ID debe ser un número entero mayor a 0." });
         }
-        const fabricante = await fabricantesModel.findByPk(req.params.id);
+        const fabricante = await fabricantesModel.findByPk(req.params.id, { include:[{ model: videojuegosModel, as: "juegos" }]});
         if (!fabricante) {
             return res.status(404).json({ message: "Fabricante no encontrado." });
         }
