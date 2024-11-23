@@ -81,7 +81,7 @@ const traerJuegoPorId = async (req, res) => {
         if(!validarEntero(req.params.id)) {
             return res.status(400).json({ message: "El ID debe ser un número entero mayor a 0." });
         }
-        const juego = await videojuegosModel.findByPk(req.params.id);
+        const juego = await videojuegosModel.findByPk(req.params.id, { include:[{ model: fabricantesModel, as: "fabricante" }]});
         if(!juego){
             return res.status(404).json({ message: "Videojuego no encontrado." });
         }
