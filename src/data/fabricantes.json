@@ -1,0 +1,37 @@
+[
+	{
+		"id" : 1,
+		"name" : "naughty",
+		"surname" : "dog1",
+		"createdAt" : "2024-11-01",
+		"updatedAt" : "2024-11-18"
+	},
+	{
+		"id" : 2,
+		"name" : "Rockstar",
+		"surname" : "Games",
+		"createdAt" : "2024-11-01",
+		"updatedAt" : "2024-11-01"
+	},
+	{
+		"id" : 3,
+		"name" : "Mojang",
+		"surname" : "Studios",
+		"createdAt" : "2024-11-01",
+		"updatedAt" : "2024-11-01"
+	},
+	{
+		"id" : 4,
+		"name" : "CD",
+		"surname" : "Projekt Red",
+		"createdAt" : "2024-10-20",
+		"updatedAt" : "2024-10-20"
+	},
+	{
+		"id" : 5,
+		"name" : "Bungie",
+		"surname" : "Inc",
+		"createdAt" : "2024-11-01",
+		"updatedAt" : "2024-11-01"
+	}
+]

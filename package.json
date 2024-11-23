@@ -1,0 +1,17 @@
+{
+  "name": "tp2-utn-piii-c331",
+  "version": "1.0.0",
+  "description": "<img src=\"assets/utn_logo.svg\" width=\"150\">\r <br/>\r <br/>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "sequelize": "^6.37.5"
+  }
+}
